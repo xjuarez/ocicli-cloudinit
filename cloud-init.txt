@@ -1,0 +1,6 @@
+#cloud-config
+runcmd:
+ - [ curl, -L,"https://raw.githubusercontent.com/caneagu/ocicli-cloudinit/master/installocicli.sh", --output, /home/opc/installocicli.sh ]
+ - chown opc:opc /home/opc/installocicli.sh
+ - chmod +x /home/opc/installocicli.sh
+ - echo "/home/opc/installocicli.sh" >> /home/opc/.bashrc
